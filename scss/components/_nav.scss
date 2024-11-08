@@ -1,18 +1,11 @@
-.nav {
-
-}
-
-.nav li {
-
-}
-
-
 .menu {
 	@extend %listreset;
 	position: absolute;
 	top: 100%;
 	left: 0;
 	right: 0;
+	-webkit-transform: scale(0.9);
+	-ms-transform: scale(0.9);
 	transform: scale(0.9);
 	opacity: 0;
 	visibility: hidden;
@@ -22,7 +15,11 @@
 	@include media('>=tablet') {
 		opacity: 1;
 		visibility: visible;
+		-webkit-transform: scale(1);
+		-ms-transform: scale(1);
 		transform: scale(1);
+		display: -webkit-box;
+		display: -ms-flexbox;
 		display: flex;
 		background: none;
 		position: static;
@@ -33,6 +30,8 @@
 		display: block;
 		text-transform: uppercase;
 		color: $white;
+		-webkit-transition: color .2s ease;
+		-o-transition: color .2s ease;
 		transition: color .2s ease;
 		padding: 5px 10px;
 
@@ -60,6 +59,8 @@
 	background-color: darken($green, 10%);
 	position: relative;
 	border-radius: 3px;
+	-webkit-transition: background-color .2s linear;
+	-o-transition: background-color .2s linear;
 	transition: background-color .2s linear;
 
 	@include media('>=tablet') {
@@ -81,6 +82,8 @@
 		right: 25%;
 		height: 3px;
 		margin-top: -2px;
+		-webkit-transition: .3s linear;
+		-o-transition: .3s linear;
 		transition: .3s linear;
 	}
 
@@ -103,6 +106,8 @@
 
 		&::before,
 		&::after {
+			-webkit-transform: rotate(45deg);
+			-ms-transform: rotate(45deg);
 			transform: rotate(45deg);
 			top: 50%;
 			left: 15%;
@@ -110,6 +115,8 @@
 		}
 
 		&::after {
+			-webkit-transform: rotate(-45deg);
+			-ms-transform: rotate(-45deg);
 			transform: rotate(-45deg);
 		}
 	}
@@ -117,6 +124,8 @@
 	.menu {
 		opacity: 1;
 		visibility: visible;
+		-webkit-transform: scale(1);
+		-ms-transform: scale(1);
 		transform: scale(1);
 	}
 }

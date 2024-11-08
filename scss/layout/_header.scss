@@ -9,20 +9,35 @@
 
 	.container {
 		@include media('>=tablet') {
+			display: -webkit-box;
+			display: -ms-flexbox;
 			display: flex;
+			-webkit-box-pack: justify;
+			-ms-flex-pack: justify;
 			justify-content: space-between;
+			-webkit-box-align: center;
+			-ms-flex-align: center;
 			align-items: center;
 		}
 	}
 }
 
 .header-holder {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
+	-webkit-box-pack: justify;
+	-ms-flex-pack: justify;
 	justify-content: space-between;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
 	align-items: center;
 	z-index: 101;
 	margin: 0 -15px;
 	@include media('>=tablet') {
+		-webkit-box-orient: horizontal;
+		-webkit-box-direction: normal;
+		-ms-flex-direction: row;
 		flex-direction: row;
 	}
 

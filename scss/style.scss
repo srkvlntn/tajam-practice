@@ -17,44 +17,31 @@ $media-expressions: (
 	'retina3x': '(-webkit-min-device-pixel-ratio: 2.5), (min-resolution: 240dpi)'
 );
 
-// ligatured operators ≥ ≤
 
 @import 'components/normalize';
 
-// Базовые переменные  (изменяем от макета к макету)
 @import 'components/variables';
 
-// Медиазапросы НЕ ТРОГАЕМ
 @import 'components/include-media';
 
-// Базовые миксины  (изменяем от макета к макету)
 @import 'components/mixins';
 
-// Базовые стили для форм НЕ ТРОГАЕМ
 @import 'components/form';
 
-// Базовые стили для типографии (изменяем от макета к макету)
 @import 'components/base';
 
-// Стили для грида (изменяем от макета к макету)
 @import 'components/grid';
 
-// Стили для кнопок (изменяем от макета к макету)
 @import 'components/button';
 
-// Стили для компоненты nav (изменяем от макета к макету)
 @import 'components/nav';
 
-// Стили для компоненты card (изменяем от макета к макету)
 @import 'components/card';
 
-// Сюда пишем общие стили для проекта (изменяем от макета к макету)
 @import 'layout/common';
 
-// Сюда пишем стили для хедера в проекта (изменяем от макета к макету)
 @import 'layout/header';
 
-// Сюда пишем стили для футера в проекта (изменяем от макета к макету)
 @import 'layout/footer';
 
 @import "slick/slick.css";

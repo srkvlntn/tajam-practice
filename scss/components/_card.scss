@@ -2,6 +2,7 @@
 	color: $white;
 	padding: 80px 45px;
 	text-align: center;
+	-ms-flex-line-pack: center;
 	align-content: center;
 	width: 100%;
 	z-index: 2;
@@ -31,6 +32,8 @@
 			background-color: $green;
 			top: 100%;
 			left: 50%;
+			-webkit-transform: translateX(-50%);
+			-ms-transform: translateX(-50%);
 			transform: translateX(-50%);
 		}
 	}
@@ -41,6 +44,8 @@
 
 	a {
 		text-transform: uppercase;
+		-webkit-transition: color .2s ease;
+		-o-transition: color .2s ease;
 		transition: color .2s ease;
 		font-weight: 700;
 
@@ -49,16 +54,3 @@
 		}
 	}
 }
-
-.card-image {
-
-}
-
-.card-title {
-
-}
-
-.card-description {
-
-}
-
