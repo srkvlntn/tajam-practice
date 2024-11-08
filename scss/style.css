@@ -6,6 +6,8 @@
  * 2. Prevent adjustments of font size after orientation changes in iOS.
  */
 @import "slick/slick.css";
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@900&display=swap");
 html {
   line-height: 1.15; /* 1 */
   -webkit-text-size-adjust: 100%; /* 2 */
@@ -383,7 +385,7 @@ html {
 body {
   color: rgba(65, 61, 75, 0.7529411765);
   background: #fff;
-  font: 14px/1.5 "Roboto", "Arial", "Helvetica Neue", "Helvetica", sans-serif;
+  font: 14px/1.5 "Roboto", sans-serif;
   min-width: 320px;
 }
 
@@ -440,7 +442,7 @@ a:hover {
   transition: color 0.15s ease-in-out, border-color 0.15s ease-in-out, background-color 0.15s ease-in-out;
   display: inline-block;
   vertical-align: middle;
-  padding: 15px;
+  padding: 10px 15px;
   border-radius: 2px;
   text-align: center;
   border: 1px solid #00e0d0;
@@ -562,6 +564,7 @@ a:hover {
   align-content: center;
   width: 100%;
   z-index: 2;
+  font-weight: 300;
 }
 @media (min-width: 768px) {
   .card {
@@ -574,6 +577,8 @@ a:hover {
   margin-bottom: 30px;
   text-transform: capitalize;
   position: relative;
+  font-family: "Playfair Display", serif;
+  font-weight: 900;
 }
 @media (min-width: 768px) {
   .card h1 {
@@ -596,6 +601,7 @@ a:hover {
 .card a {
   text-transform: uppercase;
   transition: color 0.2s ease;
+  font-weight: 700;
 }
 .card a:hover {
   color: #fff;
@@ -690,7 +696,7 @@ a:hover {
 }
 .story-row img {
   display: block;
-  width: 100%;
+  max-width: 100%;
   margin-bottom: 20px;
 }
 @media (min-width: 768px) {
@@ -706,6 +712,8 @@ a:hover {
 .story-row .box h2 {
   margin-bottom: 20px;
   color: #413d4b;
+  font-family: "Playfair Display", serif;
+  font-weight: 900;
 }
 @media (min-width: 768px) {
   .story-row .box h2 {
@@ -714,12 +722,14 @@ a:hover {
 }
 .story-row .box p {
   margin-bottom: 20px;
+  font-weight: 300;
 }
 .story-row .box p + p {
   margin-bottom: 30px;
 }
 .story-row .box .btn {
   width: 100%;
+  font-weight: 700;
 }
 @media (min-width: 768px) {
   .story-row .box .btn {
@@ -732,6 +742,7 @@ a:hover {
   position: absolute;
   width: 100%;
   z-index: 100;
+  font-weight: 700;
 }
 @media (min-width: 768px) {
   .header {
