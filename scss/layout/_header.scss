@@ -1,14 +1,29 @@
 .header {
 	position: absolute;
 	width: 100%;
+	z-index: 100;
+	@include media('>=tablet') {
+		padding: 15px 0;
+	}
+
+	.container {
+		@include media('>=tablet') {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+		}
+	}
 }
 
 .header-holder {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	z-index: 3;
+	z-index: 101;
 	margin: 0 -15px;
+	@include media('>=tablet') {
+		flex-direction: row;
+	}
 
 	img {
 		display: block;
