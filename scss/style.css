@@ -718,7 +718,36 @@ a:hover {
   width: 100%;
 }
 .card h1 {
-  margin-bottom: 40px;
+  font-size: 24px;
+  padding-bottom: 20px;
+  margin-bottom: 30px;
+  text-transform: capitalize;
+  position: relative;
+}
+@media (min-width: 768px) {
+  .card h1 {
+    font-size: 32px;
+  }
+}
+.card h1::before {
+  content: "";
+  position: absolute;
+  height: 2px;
+  width: 50px;
+  background-color: #00e0d0;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.card p {
+  margin-bottom: 65px;
+}
+.card a {
+  text-transform: uppercase;
+  transition: color 0.2s ease;
+}
+.card a:hover {
+  color: #fff;
 }
 
 .wrapper {
@@ -748,6 +777,36 @@ a:hover {
 
 .intro-slider {
   z-index: 2;
+}
+.intro-slider .slick-dots {
+  position: absolute;
+  list-style: none;
+  bottom: 25px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+.intro-slider .slick-dots li {
+  display: inline-block;
+  margin: 0 5px;
+}
+.intro-slider .slick-dots li button {
+  background: transparent;
+  font-size: 0;
+  width: 10px;
+  height: 10px;
+  padding: 5px;
+  border: 2px solid #c2c2c2;
+  border-radius: 50%;
+  transition: background-color 0.2s linear;
+}
+.intro-slider .slick-dots li button:hover {
+  background: rgb(0, 198.5, 184.3214285714);
+}
+.intro-slider .slick-dots .slick-active button {
+  background-color: #00e0d0;
 }
 
 .header {

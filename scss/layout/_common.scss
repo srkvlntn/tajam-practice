@@ -13,8 +13,6 @@
 
 
 .intro {
-
-
 	&::before {
 		content: "";
 		position: absolute;
@@ -22,7 +20,7 @@
 		left: 0;
 		right: 0;
 		bottom: 0;
-		background: linear-gradient(to bottom, #09052f 0%,#311d5e 100%) ;
+		background: linear-gradient(to bottom, #09052f 0%, #311d5e 100%);
 		opacity: 0.8;
 		z-index: 1;
 	}
@@ -30,5 +28,44 @@
 
 .intro-slider {
 	z-index: 2;
+
+	.slick-dots {
+		position: absolute;
+		list-style: none;
+		bottom: 25px;
+		left: 50%;
+		transform: translateX(-50%);
+		padding: 0;
+		margin: 0;
+		text-align: center;
+
+		li {
+			display: inline-block;
+			margin: 0 5px;
+
+			button {
+				background: transparent;
+				font-size: 0;
+				width: 10px;
+				height: 10px;
+				padding: 5px;
+				border: 2px solid #c2c2c2;
+				border-radius: 50%;
+				transition: background-color .2s linear;
+
+				&:hover {
+					background: darken($green, 5%);
+				}
+
+
+			}
+		}
+
+		.slick-active {
+			button {
+				background-color: $green;
+			}
+		}
+	}
 }
 
