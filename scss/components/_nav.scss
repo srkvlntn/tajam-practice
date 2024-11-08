@@ -1,0 +1,108 @@
+.nav {
+
+}
+
+.nav li {
+
+}
+
+
+.menu {
+	@extend %listreset;
+	position: absolute;
+	z-index: 3;
+	top: 100%;
+	left: 0;
+	right: 0;
+	transform: scale(0.9);
+	opacity: 0;
+	visibility: hidden;
+	background-color: #432878;
+	transition: opacity .2s ease, visibility .2s ease, transform .2s ease, -webkit-transform .2s ease;
+
+	a {
+		display: block;
+		text-transform: uppercase;
+		color: $white;
+		transition: color .2s ease;
+		padding: 5px 10px;
+
+		&:hover {
+			color: $green;
+			text-decoration: none;
+		}
+	}
+
+	li {
+		margin-bottom: 2px;
+	}
+	.active {
+		color: $green;
+	}
+}
+
+.menu-opener {
+	z-index: 3;
+	display: inline-block;
+	vertical-align: top;
+	width: 40px;
+	height: 40px;
+	background-color: darken($green, 10%);
+	position: relative;
+	border-radius: 3px;
+	transition: background-color .2s linear;
+
+	&:hover {
+		background-color: darken($green, 15%);
+	}
+
+	span,
+	&::before,
+	&::after {
+		background-color: $white;
+		border-radius: 4px;
+		position: absolute;
+		top: 50%;
+		left: 25%;
+		right: 25%;
+		height: 3px;
+		margin-top: -2px;
+		transition: .3s linear;
+	}
+
+	&::before,
+	&::after {
+		content: "";
+		top: 30%;
+	}
+
+	&::after {
+		top: 70%;
+	}
+}
+
+.mobile-menu-active {
+	.menu-opener {
+		span {
+			opacity: 0;
+		}
+
+		&::before,
+		&::after {
+			transform: rotate(45deg);
+			top: 50%;
+			left: 15%;
+			right: 15%;
+		}
+
+		&::after {
+			transform: rotate(-45deg);
+		}
+	}
+
+	.menu {
+		opacity: 1;
+		visibility: visible;
+		transform: scale(1);
+	}
+}

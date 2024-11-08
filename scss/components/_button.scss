@@ -1,0 +1,26 @@
+.btn {
+	transition: color .15s ease-in-out, border-color .15s ease-in-out, background-color .15s ease-in-out;
+	display: inline-block;
+	vertical-align: middle;
+	padding: 15px;
+	border-radius: 3px;
+	text-align: center;
+	border: 1px solid $green;
+
+	&:hover {
+		text-decoration: none;
+		outline: none;
+	}
+
+
+	&.btn-primary {
+		background-color: $white;
+		color: $green;
+
+		&:hover {
+			background-color: $green;
+			color: $white;
+		}
+	}
+
+}
