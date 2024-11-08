@@ -3,9 +3,11 @@
 	display: inline-block;
 	vertical-align: middle;
 	padding: 15px;
-	border-radius: 3px;
+	border-radius: 2px;
 	text-align: center;
 	border: 1px solid $green;
+	text-transform: uppercase;
+	font-size: 16px;
 
 	&:hover {
 		text-decoration: none;

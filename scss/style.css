@@ -408,19 +408,19 @@ h1 {
 }
 
 h2 {
-  font-size: 22px;
-}
-
-h3 {
   font-size: 20px;
 }
 
-h4 {
+h3 {
   font-size: 18px;
 }
 
-h5 {
+h4 {
   font-size: 17px;
+}
+
+h5 {
+  font-size: 16px;
 }
 
 h6 {
@@ -612,9 +612,11 @@ a:hover {
   display: inline-block;
   vertical-align: middle;
   padding: 15px;
-  border-radius: 3px;
+  border-radius: 2px;
   text-align: center;
   border: 1px solid #00e0d0;
+  text-transform: uppercase;
+  font-size: 16px;
 }
 .btn:hover {
   text-decoration: none;
@@ -631,7 +633,7 @@ a:hover {
 
 .menu {
   position: absolute;
-  z-index: 3;
+  z-index: 100;
   top: 100%;
   left: 0;
   right: 0;
@@ -716,6 +718,7 @@ a:hover {
   text-align: center;
   align-content: center;
   width: 100%;
+  z-index: 2;
 }
 .card h1 {
   font-size: 24px;
@@ -753,7 +756,6 @@ a:hover {
 .wrapper {
   overflow: hidden;
   position: relative;
-  z-index: 1;
 }
 
 .container {
@@ -763,6 +765,11 @@ a:hover {
   z-index: 2;
 }
 
+.intro {
+  position: relative;
+  padding: 40px 0 0 0;
+  z-index: 1;
+}
 .intro::before {
   content: "";
   position: absolute;
@@ -771,17 +778,20 @@ a:hover {
   right: 0;
   bottom: 0;
   background: linear-gradient(to bottom, #09052f 0%, #311d5e 100%);
+  pointer-events: none;
   opacity: 0.8;
   z-index: 1;
 }
 
 .intro-slider {
-  z-index: 2;
+  min-height: 70vh;
+  padding-bottom: 20px;
+  z-index: 3;
 }
 .intro-slider .slick-dots {
   position: absolute;
   list-style: none;
-  bottom: 25px;
+  bottom: 75px;
   left: 50%;
   transform: translateX(-50%);
   padding: 0;
@@ -798,15 +808,35 @@ a:hover {
   width: 10px;
   height: 10px;
   padding: 5px;
-  border: 2px solid #c2c2c2;
+  border: 1px solid #c2c2c2;
   border-radius: 50%;
   transition: background-color 0.2s linear;
 }
 .intro-slider .slick-dots li button:hover {
-  background: rgb(0, 198.5, 184.3214285714);
+  background: rgb(0, 173, 160.6428571429);
 }
 .intro-slider .slick-dots .slick-active button {
   background-color: #00e0d0;
+}
+
+.story {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 0;
+}
+.story img {
+  margin-bottom: 20px;
+}
+.story h2 {
+  margin-bottom: 20px;
+  color: #413d4b;
+}
+.story p {
+  margin-bottom: 20px;
+}
+.story .btn {
+  width: 100%;
 }
 
 .header {
@@ -828,6 +858,7 @@ a:hover {
 
 .logo {
   z-index: 3;
+  padding: 5px;
   width: 100px;
 }
 @media (min-width: 768px) {
